@@ -4,22 +4,37 @@
 </head>
 
 <body>
-  <header>
-    <h1 class="heading">Discussion Board</h1>
+  <header class="heading">
+    <h1 class="title">Discussion Board</h1>
+    {{#if currentUser}}
+      {{> logout}}
+    {{/if}}
   </header>
 
   {{#if currentUser}}
     {{> comments}}
   {{else}}
     {{> login}}
+    <br/>
+    <strong class="seperator">OR</strong>
+    <br/>
     {{> register}}
   {{/if}}
 </body>
 
-
-
 <template name="comments">
-  Comments
+  <form class="form-panel">
+    <textarea name="comment" rows="3" class="form-textarea" placeholder="Your comment here..." required></textarea>
+    <button class="form-button">Add Comment</button>
+    <hr/>
+
+    {{#each comment in comments}}
+      <div class="comment">
+        <p class="comment-text">{{comment.text}}</p>
+        <em> - {{comment.userEmail}}</em>
+      </div>
+    {{/each}}
+  </form>
 </template>
 
 <template name="login">
@@ -39,4 +54,8 @@
     <input class="form-input" placeholder="Confirm Password" name="confirmPassword" type="password" />
     <button class="form-button">Register</button>
   </form>
+</template>
+
+<template name="logout">
+  <button class="form-button logout-btn">Logout</button>
 </template>

@@ -13,7 +13,7 @@
 }
 
 .form-panel .form-header, .heading {
-  font-size: 2.3em;
+  font-size: 2em;
   text-shadow: 0.05em 0.05em 0.1em #777;
   padding: 0.3em 0.05em;
   margin: 0;
@@ -23,7 +23,7 @@
 
 .form-panel .form-input,
 .form-panel .form-label,
-.form-panel .form-button,
+.form-button,
 .form-panel .form-textarea {
   margin: 0.8em auto;
   display: block;
@@ -33,7 +33,7 @@
 }
 
 .form-panel .form-input,
-.form-panel .form-button,
+.form-button,
 .form-panel .form-textarea {
   background-color: #eee;
   border: 0.1em solid #777;
@@ -42,7 +42,7 @@
 }
 
 .form-panel .form-input:focus,
-.form-panel .form-button:focus,
+.form-button:focus,
 .form-panel .form-textarea:focus {
   background-color: #f7f7f7;
   border-color: #555;
@@ -83,14 +83,62 @@
   box-shadow: 0 0 0.1em 0.1em #555;
 }
 
-.form-panel .form-button {
+.form-button {
   margin-top: 1.5em;
   padding: 0.3em 1em;
   cursor: pointer;
 }
 
-.form-panel .form-button:hover {
+.form-button:hover {
   box-shadow: 0.05em 0.05em 0.2em;
+}
+
+.form-textarea {
+  min-height: 5em;
+}
+
+.comment {
+  border-top: 0.05em solid #777;
+  margin: 1em auto;
+  text-align: left;
+}
+
+.comment .comment-text {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+}
+
+.comment > em {
+  display: block;
+  text-align: right;
+  color: #555;
+}
+
+.seperator {
+  color: #999;
+  font-size: 1.5em;
+}
+
+.heading {
+  font-size: 1em;
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.heading .title {
+  margin: 0;
+  flex-grow: 1;
+  font-size: 2.5em;
+}
+
+.logout-btn {
+  margin: 0 auto;
+  color: red;
+  border-color: red;
+  background-color: transparent;
 }
 
 body {
@@ -98,6 +146,7 @@ body {
   padding: 1em;
   font-size: 0.8em;
   font-family: 'bree serif', cambria, serif;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
