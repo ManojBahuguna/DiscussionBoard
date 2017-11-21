@@ -1,7 +1,42 @@
 <head>
   <title>Discussion Board</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bree+Serif" />
 </head>
 
 <body>
-  
+  <header>
+    <h1 class="heading">Discussion Board</h1>
+  </header>
+
+  {{#if currentUser}}
+    {{> comments}}
+  {{else}}
+    {{> login}}
+    {{> register}}
+  {{/if}}
 </body>
+
+
+
+<template name="comments">
+  Comments
+</template>
+
+<template name="login">
+  <form class="form-panel">
+    <h3 class="form-header"> Login Now </h3>
+    <input class="form-input" placeholder="Email ID" name="email" type="email" required/>
+    <input class="form-input" placeholder="Password" name="password" type="password" required/>
+    <button class="form-button">Login</button>
+  </form>
+</template>
+
+<template name="register">
+  <form class="form-panel">
+    <h3 class="form-header"> Create Account  </h3>
+    <input class="form-input" placeholder="Email ID" name="email" type="email" />
+    <input class="form-input" placeholder="Password" name="password" type="password" />
+    <input class="form-input" placeholder="Confirm Password" name="confirmPassword" type="password" />
+    <button class="form-button">Register</button>
+  </form>
+</template>

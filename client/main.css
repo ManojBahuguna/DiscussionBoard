@@ -1,1 +1,111 @@
-/* CSS declarations go here */
+.form-panel {
+  box-shadow: 0 0 0.5em;
+  text-align: center;
+  color: #333;
+  display: inline-block;
+  width: 35em;
+  margin: 0.5em auto;
+  border: 0.15em solid #777;
+  background-color: #f7f7f7;
+  padding: 0.1em 1em;
+  max-width: 100%;
+  border-radius: 0.5em;
+}
+
+.form-panel .form-header, .heading {
+  font-size: 2.3em;
+  text-shadow: 0.05em 0.05em 0.1em #777;
+  padding: 0.3em 0.05em;
+  margin: 0;
+  margin-bottom: 1em;
+  border-bottom: 0.05em solid #555;
+}
+
+.form-panel .form-input,
+.form-panel .form-label,
+.form-panel .form-button,
+.form-panel .form-textarea {
+  margin: 0.8em auto;
+  display: block;
+  font-size: 1.3em;
+  font-family: inherit;
+  color: inherit;
+}
+
+.form-panel .form-input,
+.form-panel .form-button,
+.form-panel .form-textarea {
+  background-color: #eee;
+  border: 0.1em solid #777;
+  border-radius: 0.2em;
+  outline: none;
+}
+
+.form-panel .form-input:focus,
+.form-panel .form-button:focus,
+.form-panel .form-textarea:focus {
+  background-color: #f7f7f7;
+  border-color: #555;
+}
+
+.form-panel .form-input,
+.form-panel .form-textarea {
+  padding: 0.2em 0.3em;
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-panel .form-input::selection,
+.form-panel .form-textarea::selection {
+  background-color: #555;
+  color: #e7e7e7;
+}
+
+@media (min-width: 576px) {
+  .form-panel .form-input.form-input-inline,
+  .form-panel .form-textarea.form-input-inline {
+    width: 49%;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.form-panel .form-checkbox {
+  outline: none;
+  background-color: #fff;
+  margin: 0 1em;
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: middle;
+}
+
+.form-panel .form-checkbox:focus {
+  box-shadow: 0 0 0.1em 0.1em #555;
+}
+
+.form-panel .form-button {
+  margin-top: 1.5em;
+  padding: 0.3em 1em;
+  cursor: pointer;
+}
+
+.form-panel .form-button:hover {
+  box-shadow: 0.05em 0.05em 0.2em;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+  font-size: 0.8em;
+  font-family: 'bree serif', cambria, serif;
+}
+
+@media (min-width: 576px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
